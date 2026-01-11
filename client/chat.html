@@ -1,0 +1,92 @@
+<!-- client/chat.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web聊天室</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="chat-container">
+  <!-- 侧边栏 - 在线用户列表 -->
+  <div class="sidebar">
+    <div class="user-header">
+      <h3 id="currentUsername"></h3>
+      <button id="logoutBtn" class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> 退出
+      </button>
+    </div>
+    <div class="online-users">
+      <h4>在线用户 (<span id="onlineCount">0</span>)</h4>
+      <ul id="userList">
+        <!-- 用户列表将通过JS动态生成 -->
+      </ul>
+    </div>
+    <div class="chat-actions">
+      <button id="exportChatBtn" class="action-btn">
+        <i class="fas fa-download"></i> 导出聊天记录
+      </button>
+      <button id="importChatBtn" class="action-btn">
+        <i class="fas fa-upload"></i> 导入聊天记录
+      </button>
+      <input type="file" id="importFile" accept=".txt" style="display: none;">
+    </div>
+  </div>
+
+  <!-- 主聊天区域 -->
+  <div class="main-chat">
+    <!-- 聊天消息区域 -->
+    <!-- 会话标题栏 -->
+    <div class="session-header">
+      <div class="session-title" id="sessionTitle">群聊 - 所有人</div>
+      <div class="session-type" id="sessionType">群聊</div>
+    </div>
+    <div class="messages-container">
+      <div id="messages">
+        <!-- 空会话提示（初始显示） -->
+        <div class="empty-session" id="emptySession">
+          <i class="fas fa-comments"></i>
+          <p>还没有消息，开始聊天吧！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 输入区域 -->
+    <div class="input-container">
+      <!-- 工具栏 -->
+      <div class="toolbar">
+        <button id="emojiBtn" class="tool-btn" title="表情">
+          <i class="far fa-smile"></i>
+        </button>
+        <button id="imageBtn" class="tool-btn" title="发送图片">
+          <i class="far fa-image"></i>
+        </button>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+      </div>
+
+      <!-- 输入框 -->
+      <div class="input-area">
+                    <textarea
+                            id="messageInput"
+                            placeholder="输入消息..."
+                            rows="3"
+                    ></textarea>
+        <button id="sendBtn" class="send-btn">
+          <i class="fas fa-paper-plane"></i> 发送
+        </button>
+      </div>
+
+      <!-- 表情选择器 -->
+      <div id="emojiPicker" class="emoji-picker">
+        <!-- 表情将通过JS动态生成 -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/chat.js"></script>
+</body>
+</html>

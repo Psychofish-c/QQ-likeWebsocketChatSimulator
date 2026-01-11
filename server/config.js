@@ -5,7 +5,7 @@ module.exports = {
     DB_CONFIG: {
         host: 'localhost',
         user: 'root',
-        password: 'jklhgf', // 改为你的MySQL密码
+        password: '', // 改为你的MySQL密码
         database: 'web_chat',
         port: 3306
     }

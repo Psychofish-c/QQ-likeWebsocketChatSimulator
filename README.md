@@ -283,3 +283,4 @@ For questions or issues:
 2. Review the code comments
 3. Open an issue on GitHub
 4. Contact the maintainers
+5. ![image](https://github.com/Psychofish-c/QQ-likeWebsocketChatSimulator/blob/main/img/b582f39087daa3ec7a8b4f60e29ea029.jpg)

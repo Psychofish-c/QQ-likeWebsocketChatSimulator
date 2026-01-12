@@ -1,7 +1,7 @@
 # QQ-likeWebsocketChatSimulator
 
 A web-based instant messaging system that simulates core features of QQ Web, built with modern web technologies including WebSocket, Node.js, and MySQL.
-
+![image](https://github.com/Psychofish-c/QQ-likeWebsocketChatSimulator/blob/main/img/777f9dde-1a8b-45dc-ab48-3a6d86b6c5df.png)
 ## 🚀 Features
 
 ### Core Chat Functionality
